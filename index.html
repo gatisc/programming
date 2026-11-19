@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,25 +7,493 @@
   <link rel="stylesheet" href="">
 </head>
 <body>
+	<img src="shutterstock.png" alt="Programming" style="width:10%">*
+	<main>
+	  <h1>Mana mājas lapa</h1>
+	  <h2>Šeit rakstīšu jaunumus</h2>
+	  <br />
+	  <p>Latvijas Pensiju sistēmas dalībnieku asociācijas biedrs.</p>
+	  <p>Nākotnē vēlos kļūt par apdrošināšanas aģentu arī dzīvē, ne tikai pēc izglītības.</p>
+	  <p>Strādāju uz pusslodzi par programmētāju.</p>
+	  <br />
+	  <p>Hobiji: lauksaimniecības un celtniecības tehnikas vadītājs (lieku tiesības), EDM producēšana (esmu pabeidzis skaņu skolu), grāmatvedība (ceturtā kvalifikācija), amatierteātra aktieris.</p>
+	  <br />
+	  <p><a href="mailto:freelancelatvia@inbox.lv">freelancelatvia@inbox.lv</a></p>
+	  <p>*attēlam ilustratīva nozīme</p>
+	</main>
+	<script src=""></script>
+</body>
+</html> -->
 
-<img src="shutterstock.png" alt="Programming" style="width:10%">*
 
-<main>
-  <h1>Mana mājas lapa</h1>
-  <h2>Šeit rakstīšu jaunumus</h2>
-  <br />
-  <p>Latvijas Pensiju sistēmas dalībnieku asociācijas biedrs.</p>
-  <p>Nākotnē vēlos kļūt par apdrošināšanas aģentu arī dzīvē, ne tikai pēc izglītības.</p>
-  <p>Strādāju uz pusslodzi par programmētāju.</p>
-<br />
-  <p>Hobiji: lauksaimniecības un celtniecības tehnikas vadītājs (lieku tiesības), EDM producēšana (esmu pabeidzis skaņu skolu), grāmatvedība (ceturtā kvalifikācija), amatierteātra aktieris.</p>
-  <br />
-  <p><a href="mailto:freelancelatvia@inbox.lv">freelancelatvia@inbox.lv</a></p>
-  
-  <p>*attēlam ilustratīva nozīme</p>
-</main>
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
 
-<script src=""></script>
+  <title>Mana mājas lapa | Personīgais portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b1020;
+      color: #f1f5f9;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Animated background */
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background: #7138ff;
+      filter: blur(180px);
+      opacity: 0.2;
+      top: -150px;
+      left: -150px;
+      z-index: -1;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      background: #008cff;
+      filter: blur(180px);
+      opacity: 0.15;
+      bottom: -100px;
+      right: -100px;
+      z-index: -1;
+    }
+
+    /* Navigation */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 8%;
+      border-bottom: 1px solid #ffffff12;
+      backdrop-filter: blur(15px);
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      color: #a78bfa;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #a78bfa;
+    }
+
+    /* Main section */
+
+    main {
+      max-width: 1050px;
+      margin: 90px auto;
+      padding: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 65px;
+      animation: fadeUp 1s ease;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #a78bfa;
+      padding: 5px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 35px #8b5cf655;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #8b5cf622;
+      border: 1px solid #8b5cf655;
+      color: #c4b5fd;
+      padding: 8px 17px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 65px);
+      margin-bottom: 15px;
+      background: linear-gradient(
+        90deg, #fff, #a78bfa, #60a5fa
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 20px;
+      min-height: 30px;
+    }
+
+    /* Content cards */
+
+    .section-title {
+      font-size: 27px;
+      margin-bottom: 25px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 55px;
+    }
+
+    .card {
+      background: #ffffff08;
+      border: 1px solid #ffffff15;
+      border-radius: 18px;
+      padding: 27px;
+      backdrop-filter: blur(15px);
+      transition: 0.35s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #a78bfa;
+      background: #ffffff12;
+      box-shadow: 0 15px 40px #0004;
+    }
+
+    .card .icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #c4b5fd;
+    }
+
+    .card p {
+      color: #94a3b8;
+      line-height: 1.7;
+    }
+
+    /* Contact */
+
+    .contact {
+      text-align: center;
+      padding: 45px 20px;
+      border: 1px solid #ffffff15;
+      background: linear-gradient(
+        135deg, #8b5cf622, #2563eb22
+      );
+      border-radius: 20px;
+    }
+
+    .contact h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #94a3b8;
+      margin-bottom: 25px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #7c3aed, #2563eb);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .contact-btn:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 25px #8b5cf688;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    /* Animations */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      main {
+        margin: 55px auto;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Mana mājas lapa.</div>
+
+    <div>
+      <a href="#sakums">Sākums</a>
+      <a href="#par-mani">Par mani</a>
+      <a href="#kontakti">Kontakti</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="sakums">
+
+      <img
+        src="shutterstock.png"
+        alt="Programming"
+        class="profile-img"
+      >
+
+      <br>
+
+      <span class="tag">PERSONĪGAIS PORTFOLIO</span>
+
+      <h1>Mana mājas lapa</h1>
+
+      <div class="subtitle">
+        <span id="typing"></span>
+      </div>
+
+    </section>
+
+    <section id="par-mani">
+
+      <h2 class="section-title">👋 Par mani</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">💼</div>
+          <h3>Profesionālā darbība</h3>
+          <p>
+            Latvijas Pensiju sistēmas dalībnieku
+            asociācijas biedrs.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🛡️</div>
+          <h3>Nākotnes mērķi</h3>
+          <p>
+            Nākotnē vēlos kļūt par apdrošināšanas
+            aģentu arī dzīvē, ne tikai pēc izglītības.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>Programmēšana</h3>
+          <p>
+            Strādāju uz pusslodzi par programmētāju.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🚜</div>
+          <h3>Tehnika</h3>
+          <p>
+            Lauksaimniecības un celtniecības tehnikas
+            vadītājs (lieku tiesības).
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎧</div>
+          <h3>Mūzika</h3>
+          <p>
+            EDM producēšana. Esmu pabeidzis skaņu skolu.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3>Grāmatvedība</h3>
+          <p>
+            Grāmatvedība – ceturtā kvalifikācija.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎭</div>
+          <h3>Amatierteātris</h3>
+          <p>
+            Amatierteātra aktieris.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="contact" id="kontakti">
+
+      <h2>Sazināsimies!</h2>
+
+      <p>
+        Ja vēlies sazināties vai sadarboties,
+        droši raksti man.
+      </p>
+
+      <a
+        href="mailto:freelancelatvia@inbox.lv"
+        class="contact-btn"
+      >
+        ✉ Rakstīt e-pastu
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Mana mājas lapa.
+    <br><br>
+    * Attēlam ilustratīva nozīme.
+  </footer>
+
+  <script>
+
+    // Typing animation
+
+    const phrases = [
+      "Programmētājs 💻",
+      "EDM producents 🎧",
+      "Nākotnes apdrošināšanas aģents 🛡️",
+      "Daudzpusīga personība 🚀"
+    ];
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeEffect() {
+      const current = phrases[phraseIndex];
+      const typing = document.getElementById("typing");
+
+      typing.textContent = current.substring(0, charIndex);
+
+      if (!deleting) {
+        charIndex++;
+
+        if (charIndex > current.length) {
+          deleting = true;
+          setTimeout(typeEffect, 1400);
+          return;
+        }
+      } else {
+        charIndex--;
+
+        if (charIndex < 0) {
+          deleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          charIndex = 0;
+        }
+      }
+
+      setTimeout(typeEffect, deleting ? 45 : 90);
+    }
+
+    typeEffect();
+
+    // Scroll reveal animation
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    document.querySelectorAll(".card").forEach(card => {
+      observer.observe(card);
+    });
+
+    // Dynamic year
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
 
 </body>
 </html>
+
